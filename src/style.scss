@@ -1,7 +1,7 @@
 .to-do-list-container {
     width: 100%;
     max-width: 540px;
-    background: blue;
+    background: rgb(102, 102, 241);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -34,5 +34,55 @@
         background: orange;
         cursor: pointer;
         border-radius: 40px;
+    }
+}
+
+.list {
+    &__task {
+        list-style: none;
+        font-size: 17px;
+        padding: 12px 8px 12px 50px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+    }
+    &__task::before {
+        content: "";
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-image: url(assets/unchecked.png);
+        background-size: cover;
+        background-position: center;
+        top: 12px;
+        left: 8px;
+    }
+    &__task--cross {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: black;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    &__task--cross:hover {
+        background: #edeef0;
+    }
+}
+
+.list {
+    &__checked {
+        color: #555;
+        text-decoration: line-through;
+    }
+}
+.list {
+    &__checked::before {
+        background-image: url(assets/checked.png);
     }
 }

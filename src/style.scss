@@ -1,0 +1,38 @@
+.to-do-list-container {
+    width: 100%;
+    max-width: 540px;
+    background: blue;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.heading {
+    color: white;
+}
+
+.new-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(228, 223, 223);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    &__input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+        font-weight: 14px;
+    }
+    &__btn {
+        border: none;
+        outline: none;
+        padding: 16px 50px;
+        background: orange;
+        cursor: pointer;
+        border-radius: 40px;
+    }
+}

@@ -75,14 +75,10 @@
     }
 }
 
-.list {
-    &__checked {
-        color: #555;
-        text-decoration: line-through;
-    }
+ul li#checked {
+    color: #555;
+    text-decoration: line-through;
 }
-.list {
-    &__checked::before {
-        background-image: url(assets/checked.png);
-    }
+ul li#checked::before {
+    background-image: url(assets/checked.png);
 }

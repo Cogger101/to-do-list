@@ -15,6 +15,7 @@ const addingTask = () => {
         let li = document.createElement("li");
         li.innerHTML = input.value;
         li.classList.add("list__task");
+        li.id = "checked";
         list.appendChild(li);
         input.value = "";
         let crossIcon = document.createElement("span");
@@ -28,7 +29,11 @@ submitBtn.addEventListener("click", addingTask);
 
 const handleTaskClick = (e: any) => {
     if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
+        if (e.target.id === "checked") {
+            e.target.removeAttribute("id");
+        } else {
+            e.tartget.id = "checked";
+        }
     } else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
     }

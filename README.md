@@ -27,7 +27,12 @@ EXT available on request
 
 ### SCSS
 
+-   Create a container for the to-do-list
+-   Allow the input and submit buttons to be clear and ovbious for the user to type and submit task
+
 ### TS
 
 -   Create an event listener for the 'add to list' button that generates a task when submitted
--
+-   create a cross with an event listener to delete the tasks from the list
+-   Create a listener event to allow the tasks to be checked off
+-   Ensure an empty task can't be added
